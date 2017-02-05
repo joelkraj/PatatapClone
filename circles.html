@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circle</title>
+	<link rel="stylesheet" type="text/css" href="circles.css">
+	<script type="text/javascript" src="paper-full.min.js"></script>
+	<script type="text/paperscript" canvas="myCanvas">
+		var path = new Path();
+		path.strokeColor = 'green';
+		var start = new Point(100, 100);
+		path.moveTo(start);
+		path.lineTo(start + [ 600, -50 ]);
+
+		var myCircle = new Path.Circle(new Point(100, 70), 10);
+		myCircle.fillColor = 'white';
+
+		var myCircle2 = new Path.Circle(new Point(550, 50), 300);
+		myCircle2.fillColor = 'green';
+	</script>
+</head>
+<body>
+
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
